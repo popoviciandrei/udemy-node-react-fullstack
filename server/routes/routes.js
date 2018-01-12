@@ -21,21 +21,4 @@ module.exports = app => {
   app.get('/api/current_user', (req, res) => {
     res.send(req.user);
   });
-
-  app.get('/api/music_albums', (req, res) => {
-    res.send([
-      {
-        title: 'Taylor Swift',
-        artist: 'Taylor Swift'
-      },
-      {
-        title: 'Fearless',
-        artist: 'Taylor Swift'
-      },
-      {
-        title: 'Speak Now',
-        artist: 'Taylor Swift'
-      }
-    ]);
-  });
 };
