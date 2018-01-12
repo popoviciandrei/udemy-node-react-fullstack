@@ -1,1 +1,1 @@
-require('./api/index.js');
+require('./server/index.js');
