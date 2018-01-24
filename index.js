@@ -7,6 +7,7 @@ const keys = require('./server/config/keys');
 
 // Init the passport for Oauth2 via google
 require('./server/database/models/User');
+require('./server/database/models/Survey');
 require('./server/services/passport');
 
 // Init the mongoDb
@@ -28,6 +29,7 @@ app.use(bodyParser.json()); // Set the app to accept json body requests
 
 require('./server/routes/authRoutes')(app); // Attach the authentication router to the app
 require('./server/routes/billingRoutes')(app); // Attach the billing router
+require('./server/routes/surveyRoutes')(app); // The survey routes
 
 if (process.env.NODE_ENV === 'production') {
   // Express will server up production assets
